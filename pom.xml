@@ -1,36 +1,63 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>de.felixschulze.android.test</groupId>
-	<artifactId>JUnitInstrumentationTestRunner</artifactId>
-	<version>1.0-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <groupId>de.felixschulze.android.test</groupId>
+    <artifactId>JUnitInstrumentationTestRunner</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
 
-	<name>JUnitInstrumentationTestRunner</name>
-	<url>http://maven.apache.org</url>
+    <name>JUnitInstrumentationTestRunner</name>
+    <description>JUnitInstrumentationTestRunner is a extension for the Android InstrumentationTestRunner which adds the
+        JUnitTestListener for writing test-results into an XML file.
+    </description>
+    <url>https://github.com/x2on/JUnitInstrumentationTestRunner</url>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
-	<dependencies>
-		<dependency>
-			<groupId>com.google.android</groupId>
-			<artifactId>android</artifactId>
-			<version>2.2.1</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.google.android</groupId>
-			<artifactId>android-test</artifactId>
-			<version>2.3.1</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>xmlwriter</groupId>
-			<artifactId>xmlwriter</artifactId>
-			<version>2.2.2</version>
-		</dependency>
-	</dependencies>
+    <developers>
+        <developer>
+            <id>x2on</id>
+            <name>Felix Schulze</name>
+            <email>code@felixschulze.de</email>
+            <url>http://www.felixschulze.de</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:https://github.com/x2on/JUnitInstrumentationTestRunner.git</connection>
+        <developerConnection>scm:git:https://x2on@github.com/x2on/JUnitInstrumentationTestRunner.git</developerConnection>
+    </scm>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>1.6_r2</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android-test</artifactId>
+            <version>1.6_r2</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>xmlwriter</groupId>
+            <artifactId>xmlwriter</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+    </dependencies>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 </project>

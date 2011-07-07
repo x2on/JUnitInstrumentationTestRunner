@@ -26,7 +26,7 @@ import android.test.InstrumentationTestRunner;
  * which adds the JUnitTestListener for writing test-results into an XML file.
  * 
  * @author <a href="mailto:code@felixschulze.de">Felix Schulze</a>
- * @see InstrumentationTestRunnerTest
+ * @see android.test.InstrumentationTestRunnerTest
  * 
  */
 
