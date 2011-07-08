@@ -4,13 +4,14 @@
 
     <groupId>de.felixschulze.android.test</groupId>
     <artifactId>JUnitInstrumentationTestRunner</artifactId>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>JUnitInstrumentationTestRunner</name>
     <description>JUnitInstrumentationTestRunner is a extension for the Android InstrumentationTestRunner which adds the
         JUnitTestListener for writing test-results into an XML file.
     </description>
+
     <url>https://github.com/x2on/JUnitInstrumentationTestRunner</url>
 
     <licenses>
@@ -31,9 +32,16 @@
     </developers>
 
     <scm>
+        <url>https://github.com/x2on/JUnitInstrumentationTestRunner</url>
         <connection>scm:git:https://github.com/x2on/JUnitInstrumentationTestRunner.git</connection>
-        <developerConnection>scm:git:https://x2on@github.com/x2on/JUnitInstrumentationTestRunner.git</developerConnection>
+        <developerConnection>scm:git:git@github.com:x2on/JUnitInstrumentationTestRunner.git</developerConnection>
     </scm>
+
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
 
     <dependencies>
         <dependency>
@@ -60,4 +68,35 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <profiles>
+        <profile>
+            <id>release-sign-artifacts</id>
+            <activation>
+                <property>
+                    <name>performRelease</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.3</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
 </project>
