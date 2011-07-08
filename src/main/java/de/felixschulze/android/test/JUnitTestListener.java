@@ -158,7 +158,6 @@ public class JUnitTestListener implements TestListener {
 
 			xmlwriter = new SimpleXmlWriter(writer);
 			xmlwriter.writeXmlVersion();
-			xmlwriter.writeComment("JUNIT Test");
 			xmlwriter.writeEntity(TAG_TESTSUITES);
 		}
 	}
